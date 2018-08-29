@@ -1,0 +1,16 @@
+.nav {
+    border-bottom: 1px solid #ccc;
+}
+
+.nav .navLink {
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.nav .navLink:hover {
+    border-bottom: 2px solid darkblue;
+}

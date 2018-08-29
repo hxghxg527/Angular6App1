@@ -1,0 +1,26 @@
+.heroes {
+    border-radius: 5px;
+    border: 1px solid #8cc14c;
+    overflow: hidden;
+}
+
+.heroes .heroItem {
+    width: 20%;
+    height: 100px;
+    line-height: 98px;
+    float: left;
+    border-left: 1px solid #8cc14c;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .5s ease, color .5s ease;
+}
+
+.heroes .heroItem:first-child {
+    border-left: none;
+}
+
+.heroes .heroItem:hover {
+    background: darkslateblue;
+    color: #fff;
+}
