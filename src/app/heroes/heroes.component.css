@@ -1,0 +1,14 @@
+.heroes {
+  border: 1px solid #ccc;
+}
+
+.heroes .heroItem {
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+}
+
+.heroes .selected {
+  background: #00a8e6;
+  color: #fff;
+}
