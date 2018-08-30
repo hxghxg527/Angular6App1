@@ -1,0 +1,13 @@
+.back {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 3px;
+    background: darkblue;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    margin-top: 30px;
+}

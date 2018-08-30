@@ -13,7 +13,9 @@
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
-    transition: background-color .5s ease, color .5s ease;
+    transition: background-color .4s ease, color .4s ease;
+    color: #000;
+    text-decoration: none;
 }
 
 .heroes .heroItem:first-child {
@@ -22,5 +24,10 @@
 
 .heroes .heroItem:hover {
     background: darkslateblue;
+    color: #fff;
+}
+
+.heroes .heroItem.selected {
+    background: dodgerblue;
     color: #fff;
 }

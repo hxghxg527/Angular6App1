@@ -9,6 +9,7 @@ import {Hero} from '../hero';
 })
 export class DashboardComponent implements OnInit {
 
+    selectedHero:Hero;
     heroes:Hero[] = [];
 
     constructor(private heroService:HeroService) {
@@ -18,8 +19,12 @@ export class DashboardComponent implements OnInit {
         this.getHeroes();
     }
 
-    getHeroes() {
-        this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
+    getHeroes():void {
+        this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes.slice(0, 5));
+    }
+
+    onSelectHero(hero:Hero):void {
+        this.selectedHero = hero;
     }
 
 }

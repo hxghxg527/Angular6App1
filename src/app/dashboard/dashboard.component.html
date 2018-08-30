@@ -1,8 +1,10 @@
 <div>
     <h3>Top Heroes</h3>
     <div class="heroes clearFix">
-        <div class="heroItem f_l" *ngFor="let hero of heroes">
+        <a class="heroItem f_l"
+           *ngFor="let hero of heroes"
+           routerLink="/heroDetail/{{hero.id}}">
             {{hero.name}}
-        </div>
+        </a>
     </div>
 </div>
