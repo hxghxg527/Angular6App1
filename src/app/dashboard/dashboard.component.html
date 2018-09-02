@@ -1,10 +1,25 @@
 <div>
     <h3>Top Heroes</h3>
-    <div class="heroes clearFix">
-        <a class="heroItem f_l"
-           *ngFor="let hero of heroes"
-           routerLink="/heroDetail/{{hero.id}}">
-            {{hero.name}}
-        </a>
+    <ul class="heroes clearFix">
+        <li class="heroItem f_l"
+            *ngFor="let hero of heroes">
+            <a routerLink="/heroDetail/{{hero.id}}">
+                {{hero.name}}
+            </a>
+            <div class="deleteButton" (click)="deleteHero(hero)">Delete</div>
+        </li>
+    </ul>
+
+    <div>
+        <label>
+            Hero name:
+            <input #heroName>
+        </label>
+        <button class="button"
+                (click)="add(heroName.value); heroName.value=''">
+            Add
+        </button>
     </div>
+
+    <app-hero-search></app-hero-search>
 </div>

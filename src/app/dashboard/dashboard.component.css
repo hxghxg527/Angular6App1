@@ -1,6 +1,8 @@
 .heroes {
     border-radius: 5px;
     border: 1px solid #8cc14c;
+    border-right: none;
+    border-bottom: none;
     overflow: hidden;
 }
 
@@ -9,17 +11,34 @@
     height: 100px;
     line-height: 98px;
     float: left;
-    border-left: 1px solid #8cc14c;
+    border-right: 1px solid #8cc14c;
+    border-bottom: 1px solid #8cc14c;
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
     transition: background-color .4s ease, color .4s ease;
     color: #000;
     text-decoration: none;
+    position: relative;
+}
+
+.heroes .heroItem a {
+    display: block;
+}
+
+.heroes .heroItem .deleteButton {
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #000;
+    font-size: 12px;
+    text-decoration: underline;
 }
 
 .heroes .heroItem:first-child {
-    border-left: none;
+    /*border-left: none;*/
 }
 
 .heroes .heroItem:hover {
@@ -27,7 +46,26 @@
     color: #fff;
 }
 
+.heroes .heroItem:hover a, .heroes .heroItem:hover .deleteButton {
+    color: #fff;
+}
+
 .heroes .heroItem.selected {
     background: dodgerblue;
     color: #fff;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 3px;
+    background: darkblue;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    margin-top: 30px;
+    margin-right: 15px;
 }
